@@ -1,6 +1,6 @@
 /datum/language/zybantine
 	name = "Zybean"
-	desc = ""
+	desc = "Owing to proximity throughout the course of history, the myriad Zybantine languages are easily understood by others from the region."
 	speech_verb = "states"
 	ask_verb = "questions"
 	exclaim_verb = "shouts"
@@ -12,23 +12,32 @@
 	spans = list(SPAN_ZYBANTINE)
 	syllables = list(
 "bā",
-"alif",
+"al",
 "tāʼ",
+"rāʼ",
+"fāʼ",
+"yāʼ",
+"ḥāʼ",
+"lā",
+"mu",
+"hi",
+"waq",
+"alif",
 "thāʼ",
 "jīm",
-"ḥāʼ",
 "khāʼ",
 "dāl",
 "dhāl",
-"rāʼ",
-"zayn",
 "zāy",
 "sīn",
 "shīn",
 "ṣād",
 "ʻayn",
-"ghayn",
-"fāʼ",
+"bar",
+"sal",
+"ham",
+"nun",
+"tār",
 "qāf",
 "kāf",
 "lām",
@@ -36,10 +45,11 @@
 "nūn",
 "hāʼ",
 "wāw",
-"yāʼ",
-"alif",
-"maddah",
 "kas",
-"fatḥah",
+"alif",
 "lahū",
-"qaṣr")
+"qaṣr",
+"zayn",
+"fatḥah",
+"maddah",
+"ghayn")

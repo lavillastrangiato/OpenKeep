@@ -1,9 +1,9 @@
 /datum/language/dwarvish
-	name = "Dwarfish"
-	desc = ""
-	speech_verb = "blabbers"
+	name = "Dwarven"
+	desc = "The Dwarven Confederacy encourages unity among dwarves through many ways, but prominently through the use of a common tongue called Dumakal."
+	speech_verb = "rumbles"
 	ask_verb = "asks"
-	exclaim_verb = "shouts"
+	exclaim_verb = "thunders"
 	key = "d"
 	flags = LANGUAGE_HIDE_ICON_IF_UNDERSTOOD | LANGUAGE_HIDE_ICON_IF_NOT_UNDERSTOOD
 	space_chance = 73

@@ -1,7 +1,7 @@
 /datum/language/celestial
 	name = "Celestial"
-	desc = ""
-	speech_verb = "says"
+	desc = "The ancient language of the aasimar is described by some like ringing bells, and by others like the clanging of swords on shields."
+	speech_verb = "rings"
 	ask_verb = "asks"
 	exclaim_verb = "yells"
 	key = "c"

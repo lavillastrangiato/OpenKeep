@@ -1,7 +1,7 @@
 /datum/language/elvish
-	name = "Elfish"
-	desc = ""
-	speech_verb = "states"
+	name = "Elvish"
+	desc = "Among the wide variety of elven cultural groups, the common tongue of Quessinach is usually used for trade and diplomacy."
+	speech_verb = "elocutes"
 	ask_verb = "questions"
 	exclaim_verb = "shouts"
 	key = "e"

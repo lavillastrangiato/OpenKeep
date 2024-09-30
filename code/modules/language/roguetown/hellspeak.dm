@@ -1,6 +1,6 @@
 /datum/language/hellspeak
 	name = "Infernal"
-	desc = ""
+	desc = "The ancient language of demons from the Void, its power and mystery largely gone with a transformation into the pidgin tongue used by tieflings."
 	speech_verb = "states"
 	ask_verb = "asks"
 	exclaim_verb = "shouts"

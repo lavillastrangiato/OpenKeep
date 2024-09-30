@@ -2257,6 +2257,7 @@
 #include "code\modules\language\xenocommon.dm"
 #include "code\modules\language\roguetown\beast.dm"
 #include "code\modules\language\roguetown\cat.dm"
+#include "code\modules\language\roguetown\delf.dm"
 #include "code\modules\language\roguetown\dwarf.dm"
 #include "code\modules\language\roguetown\elf.dm"
 #include "code\modules\language\roguetown\fae.dm"
