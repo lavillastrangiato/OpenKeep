@@ -7,6 +7,7 @@
 #define TRAIT_SEEPRICES				"Golden Blood"
 #define TRAIT_STRONGBITE				"Strong Bite"
 #define TRAIT_HATEWOMEN				"Ladykiller"
+#define TRAIT_HATEMEN				"Maneater"
 #define TRAIT_GOODLOVER				"Fabled Lover"
 #define TRAIT_SEEDKNOW 			"Seed Knower"
 #define TRAIT_NOBLE					"Noble Blooded"
@@ -68,6 +69,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_SEEPRICES = "I can tell the prices of things down to the zenny.",
 	TRAIT_STRONGBITE = "Stronger bites, critical bite attacks.",
 	TRAIT_HATEWOMEN = "Double damage against female mobs.",
+	TRAIT_HATEMEN = "Double damage against male mobs.",
 	TRAIT_GOODLOVER = "It's a blessing to share a bed with me.",
 	TRAIT_SEEDKNOW = "I know which seeds grow which crops.",
 	TRAIT_NOBLE = "<span class='blue'>I'm of noble blood.</span>",
