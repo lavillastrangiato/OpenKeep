@@ -1,0 +1,6 @@
+{
+    "map_name": "snowforest",
+    "map_path": "map_files/roguetown/otherz/snowz",
+    "map_file": "snowforest.dmm",
+	"traits": [{"Up": 1}, {"Down": -1}]
+}

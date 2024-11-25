@@ -236,7 +236,7 @@
 	desc = "A gentle blanket of snow."
 	icon_state = "snow"
 	layer = MID_TURF_LAYER
-	footstep = FOOTSTEP_GRASS
+	footstep = FOOTSTEP_SAND
 	barefootstep = FOOTSTEP_SOFT_BAREFOOT
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
@@ -264,7 +264,7 @@
 	desc = "A rugged blanket of snow."
 	icon_state = "snowrough"
 	layer = MID_TURF_LAYER
-	footstep = FOOTSTEP_GRASS
+	footstep = FOOTSTEP_SAND
 	barefootstep = FOOTSTEP_SOFT_BAREFOOT
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
@@ -292,7 +292,7 @@
 	desc = "Half-melted snow revealing the hardy grass underneath."
 	icon_state = "snowpatchy_grass"
 	layer = MID_TURF_LAYER
-	footstep = FOOTSTEP_GRASS
+	footstep = FOOTSTEP_SAND
 	barefootstep = FOOTSTEP_SOFT_BAREFOOT
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
