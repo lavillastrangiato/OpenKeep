@@ -8,11 +8,6 @@
 // END_PREFERENCES
 // BEGIN_INCLUDE
 #include "_maps\_basemap.dm"
-#include "_maps\snowy_dun_manor.dm"
-#include "_maps\map_files\snowy_dun_manor\snowy_dun_manor.dmm"
-#include "_maps\map_files\roguetown\otherz\snowdecap.dmm"
-#include "_maps\map_files\roguetown\otherz\snowforest.dmm"
-#include "_maps\map_files\roguetown\otherz\snowswamp.dmm"
 #include "_maps\templates\bog_shack_small.dm"
 #include "_maps\templates\sk_dungeons.dm"
 #include "code\__byond_version_compat.dm"
