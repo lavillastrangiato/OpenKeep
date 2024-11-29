@@ -112,6 +112,13 @@
 		return
 	..()
 
+/obj/item/natural/rock/snow
+	icon_state = "stonebigsnow1"
+
+/obj/item/natural/rock/snow/Initialize()
+	icon_state = "stonebigsnow[rand(1,2)]"
+	..()
+
 //begin ore loot rocks
 /obj/item/natural/rock/gold
 	mineralType = /obj/item/rogueore/gold
