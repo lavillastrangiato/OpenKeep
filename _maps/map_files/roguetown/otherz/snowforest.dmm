@@ -3,7 +3,7 @@
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/outdoors/river)
 "ab" = (
-/turf/open/floor/rogue/cobblerock,
+/turf/open/floor/rogue/snowcobble,
 /area/rogue/outdoors/woods)
 "ac" = (
 /turf/open/water/cleanshallow,
@@ -139,7 +139,7 @@
 /obj/effect/landmark/start/adventurerlate{
 	dir = 1
 	},
-/turf/open/floor/rogue/cobblerock,
+/turf/open/floor/rogue/snowcobble,
 /area/rogue/outdoors/river)
 "aK" = (
 /turf/open/floor/rogue/dirt/road,
@@ -316,7 +316,7 @@
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/woods)
 "pu" = (
-/turf/open/floor/rogue/cobblerock,
+/turf/open/floor/rogue/snowcobble,
 /area/rogue/outdoors/river)
 "pE" = (
 /obj/structure/stairs/stone{
@@ -353,7 +353,7 @@
 /area/rogue/indoors)
 "ru" = (
 /obj/effect/landmark/start/adventurerlate,
-/turf/open/floor/rogue/cobblerock,
+/turf/open/floor/rogue/snowcobble,
 /area/rogue/outdoors/river)
 "rB" = (
 /turf/closed/wall/mineral/rogue/wooddark/end{
@@ -499,7 +499,7 @@
 /obj/effect/landmark/start/adventurerlate{
 	dir = 4
 	},
-/turf/open/floor/rogue/cobblerock,
+/turf/open/floor/rogue/snowcobble,
 /area/rogue/outdoors/river)
 "FT" = (
 /obj/structure/chair/stool/rogue,
@@ -630,7 +630,7 @@
 	aportalgoesto = "forestout";
 	aportalid = "forestin"
 	},
-/turf/open/floor/rogue/cobblerock,
+/turf/open/floor/rogue/snowcobble,
 /area/rogue/outdoors/woods)
 "Qf" = (
 /obj/structure/bed/rogue/shit,
