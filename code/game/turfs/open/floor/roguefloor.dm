@@ -939,7 +939,7 @@
 	mouse_opacity = 0
 
 /turf/open/floor/rogue/snowcobble
-	icon_state = "snowy cobblerock"
+	icon_state = "snowcobble"
 	desc = "Snow has packed into the cracks between the stones."
 	footstep = FOOTSTEP_STONE
 	barefootstep = FOOTSTEP_HARD_BAREFOOT
