@@ -911,6 +911,7 @@
 
 /turf/open/floor/rogue/cobblerock
 	icon_state = "cobblerock"
+	desc = "A bumpy road of dirt and stone."
 	footstep = FOOTSTEP_STONE
 	barefootstep = FOOTSTEP_HARD_BAREFOOT
 	clawfootstep = FOOTSTEP_HARD_CLAW
@@ -937,6 +938,28 @@
 	icon_state = "cobblestone_edges"
 	mouse_opacity = 0
 
+/turf/open/floor/rogue/snowcobble
+	icon_state = "snowy cobblerock"
+	desc = "Snow has packed into the cracks between the stones."
+	footstep = FOOTSTEP_STONE
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	landsound = 'sound/foley/jumpland/stoneland.wav'
+	neighborlay = "snowcobble"
+	smooth = SMOOTH_TRUE
+	canSmoothWith = list(/turf/open/floor/rogue/dirt,
+						/turf/open/floor/rogue/grass,
+						/turf/open/floor/rogue/grass/red,
+						/turf/open/floor/rogue/grass/yel,
+						/turf/open/floor/rogue/grass/cold,
+						/turf/open/floor/rogue/snow,
+						/turf/open/floor/rogue/snow/patchy,
+						/turf/open/floor/rogue/snow/rough)
+
+/turf/open/floor/rogue/snowcobble/cardinal_smooth(adjacencies)
+	roguesmooth(adjacencies)
+
 /turf/open/floor/rogue/tile
 	icon_state = "chess"
 	landsound = 'sound/foley/jumpland/tileland.wav'
@@ -954,6 +977,7 @@
 						/turf/closed/wall/mineral/rogue/stone,
 						/turf/closed/wall/mineral/rogue/stone/moss,
 						/turf/open/floor/rogue/cobble,
+						/turf/open/floor/rogue/snowcobble
 						/turf/open/floor/rogue/dirt,
 						/turf/open/floor/rogue/grass,
 						/turf/open/floor/rogue/grass/red,
