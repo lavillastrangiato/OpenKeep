@@ -977,7 +977,7 @@
 						/turf/closed/wall/mineral/rogue/stone,
 						/turf/closed/wall/mineral/rogue/stone/moss,
 						/turf/open/floor/rogue/cobble,
-						/turf/open/floor/rogue/snowcobble
+						/turf/open/floor/rogue/snowcobble,
 						/turf/open/floor/rogue/dirt,
 						/turf/open/floor/rogue/grass,
 						/turf/open/floor/rogue/grass/red,

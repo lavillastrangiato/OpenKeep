@@ -22,6 +22,7 @@
 	swingsound = list('sound/combat/wooshes/blunt/shovel_swing.ogg','sound/combat/wooshes/blunt/shovel_swing2.ogg')
 	drop_sound = 'sound/foley/dropsound/shovel_drop.ogg'
 	var/obj/item/natural/dirtclod/heldclod
+	var/obj/item/natural/snowful/heldsnow
 	smeltresult = /obj/item/ingot/iron
 	associated_skill = /datum/skill/combat/polearms
 	max_blade_int = 50
@@ -29,6 +30,8 @@
 /obj/item/rogueweapon/shovel/Destroy()
 	if(heldclod)
 		QDEL_NULL(heldclod)
+	if(heldsnow)
+		QDEL_NULL(heldsnow)
 	return ..()
 
 /obj/item/rogueweapon/shovel/dropped(mob/user)
@@ -41,6 +44,8 @@
 /obj/item/rogueweapon/shovel/update_icon()
 	if(heldclod)
 		icon_state = "dirt[initial(icon_state)]"
+	else if(heldsnow)
+		icon_state = "snow[initial(icon_state)]"
 	else
 		icon_state = "[initial(icon_state)]"
 
@@ -66,8 +71,9 @@
 
 /obj/item/rogueweapon/shovel/attack(mob/living/M, mob/living/user)
 	. = ..()
-	if(. && heldclod && get_turf(M))
+	if(. && heldclod && heldsnow && get_turf(M))
 		heldclod.forceMove(get_turf(M))
+		heldsnow.forceMove(get_turf(M))
 		heldclod = null
 		update_icon()
 
@@ -117,31 +123,6 @@
 			return
 		return
 	. = ..()
-
-/* old one
-/obj/item/rogueweapon/shovel/getonmobprop(tag)
-	. = ..()
-	if(tag)
-		switch(tag)
-			if("gen")
-				return list("shrink" = 0.6,"sx" = -6,"sy" = -1,"nx" = 8,"ny" = 0,"wx" = -4,"wy" = 0,"ex" = 2,"ey" = 1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -38,"sturn" = 37,"wturn" = 32,"eturn" = -23,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
-			if("wielded")
-				return list("shrink" = 0.6,"sx" = 3,"sy" = -4,"nx" = 3,"ny" = -3,"wx" = -4,"wy" = -4,"ex" = 2,"ey" = -4,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 45,"sturn" = 135,"wturn" = -45,"eturn" = 45,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
-			if("onbelt")
-				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
-
-/obj/item/rogueweapon/shovel/getonmobprop(tag)
-	. = ..()
-	if(tag)
-		switch(tag)
-			if("gen")
-				return list("shrink" = 0.6,"sx" = -5,"sy" = -3,"nx" = -5,"ny" = -3,"wx" = -5,"wy" = -4,"ex" = 1,"ey" = -4,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 50,"sturn" = -55,"wturn" = 0,"eturn" = -23,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
-			if("wielded")
-				return list("shrink" = 0.6,"sx" = -2,"sy" = -4,"nx" = 5,"ny" = -3,"wx" = -4,"wy" = -4,"ex" = 2,"ey" = -4,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -35,"sturn" = 35,"wturn" = -20,"eturn" = 110,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
-			if("onbelt")
-				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
-
-*/
 
 /obj/item/rogueweapon/shovel/getonmobprop(tag)
 	. = ..()
@@ -212,16 +193,6 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	max_blade_int = 0
 
-/* old one
-/obj/item/rogueweapon/shovel/small/getonmobprop(tag)
-	. = ..()
-	if(tag)
-		switch(tag)
-			if("gen")
-				return list("shrink" = 0.6,"sx" = -9,"sy" = 1,"nx" = 12,"ny" = 1,"wx" = -8,"wy" = 1,"ex" = 6,"ey" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
-			if("onbelt")
-				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
-*/
 /obj/item/rogueweapon/shovel/small/getonmobprop(tag)
 	. = ..()
 	if(tag)
