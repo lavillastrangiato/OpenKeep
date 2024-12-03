@@ -130,7 +130,7 @@ SUBSYSTEM_DEF(mapping)
 		qdel(T, TRUE)
 
 /*	Nuke threats, for making the blue tiles on the station go RED
-	Used by the AI doomsday and the self destruct nuke.
+   Used by the AI doomsday and the self destruct nuke.
 */
 
 /datum/controller/subsystem/mapping/proc/add_nuke_threat(datum/nuke)
@@ -241,6 +241,7 @@ SUBSYSTEM_DEF(mapping)
 	otherZ += load_map_config("_maps/map_files/dakkatown/otherz/dakkamountain.json")
 	otherZ += load_map_config("_maps/map_files/dakkatown/otherz/dakkaswamp.json")*/
 
+	//For Rogue map
 	otherZ += load_map_config("_maps/map_files/roguetown/otherz/smallforest.json")
 	otherZ += load_map_config("_maps/map_files/roguetown/otherz/smalldecap.json")
 	otherZ += load_map_config("_maps/map_files/roguetown/otherz/smallswamp.json")
@@ -405,11 +406,6 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 
 		map_templates[R.id] = R
 		ruins_templates[R.id] = R
-
-		if(istype(R, /datum/map_template/ruin/lavaland))
-			lava_ruins_templates[R.name] = R
-		else if(istype(R, /datum/map_template/ruin/space))
-			space_ruins_templates[R.name] = R
 
 /datum/controller/subsystem/mapping/proc/preloadShuttleTemplates()
 	var/list/unbuyable = generateMapList("[global.config.directory]/unbuyableshuttles.txt")
