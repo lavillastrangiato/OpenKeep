@@ -161,7 +161,7 @@
 /obj/item/clothing/suit/roguetown/shirt/tunic
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
 	name = "tunic"
-	desc = "A unisex linen tunic."
+	desc = "A comfortable linen tunic."
 	body_parts_covered = CHEST|GROIN|VITALS
 	boobed = FALSE
 	icon_state = "tunic"
@@ -344,8 +344,6 @@
 	flags_inv = HIDEBOOB
 	r_sleeve_status = SLEEVE_NORMAL
 	l_sleeve_status = SLEEVE_NORMAL
-	allowed_sex = list(MALE, FEMALE)
-	allowed_race = list("human", "tiefling", "aasimar", "elf")
 	color = null
 	sellprice = 100
 
@@ -376,7 +374,7 @@
 	l_sleeve_status = SLEEVE_NORMAL
 	var/picked = FALSE
 	colorgrenz = TRUE
-	
+
 	armor = ARMOR_PADDED_BAD
 	prevent_crits = MINOR_CRITICALS
 	max_integrity = INTEGRITY_POOR
