@@ -1,6 +1,7 @@
 /obj/item/natural/snowful
 	name = "snow handful"
 	desc = "A handful of snow."
+	icon = 'icons/roguetown/items/natural.dmi'
 	icon_state = "snow1"
 	dropshrink = 0
 	throwforce = 0
