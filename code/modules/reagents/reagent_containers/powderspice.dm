@@ -102,20 +102,24 @@
 
 	if(M == user)
 		M.visible_message("<span class='notice'>[user] sniffs [src].</span>")
-	else
-		if(iscarbon(M))
-			var/mob/living/carbon/C = M
-			var/obj/item/bodypart/CH = C.get_bodypart(BODY_ZONE_HEAD)
-			if(!CH)
-				to_chat(user, "<span class='warning'>[C.p_theyre(TRUE)] missing something.</span>")
-			user.visible_message("<span class='danger'>[user] attempts to force [C] to inhale [src].</span>", \
-								"<span class='danger'>[user] attempts to force me to inhale [src]!</span>")
-			if(C.cmode)
-				if(!CH.grabbedby)
-					to_chat(user, "<span class='info'>[C.p_they(TRUE)] steals [C.p_their()] face from it.</span>")
-					return FALSE
-			if(!do_mob(user, M, 10))
+
+	if(iscarbon(M))
+		var/mob/living/carbon/C = M
+		var/obj/item/bodypart/CH = C.get_bodypart(BODY_ZONE_HEAD)
+		var/obj/item/bodypart/CB = C.get_bodypart(BODY_ZONE_CHEST)
+		if(!CH && !CB)
+			to_chat(user, "<span class='warning'>[C.p_theyre(TRUE)] missing something.</span>")
+		user.visible_message("<span class='danger'>[user] attempts to force [C] to inhale [src].</span>", \
+							"<span class='danger'>[user] attempts to force me to inhale [src]!</span>")
+		if(C.cmode)
+			if(!CH.grabbedby)
+				to_chat(user, "<span class='info'>[C.p_they(TRUE)] steals [C.p_their()] face from it.</span>")
 				return FALSE
+		if(CB.gender == FEMALE && get_location_accessible(C, BODY_ZONE_CHEST))
+			user.visible_message(span_info("[user] snorts powder off [C]'s bosom!"))
+		if(!do_mob(user, M, 10))
+			return FALSE
+
 
 	playsound(M, 'sound/items/sniff.ogg', 100, FALSE)
 
