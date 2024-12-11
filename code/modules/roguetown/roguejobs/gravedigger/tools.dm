@@ -35,9 +35,11 @@
 	return ..()
 
 /obj/item/rogueweapon/shovel/dropped(mob/user)
-	if(heldclod && isturf(loc))
+	if((heldclod && isturf(loc)) || (heldsnow && isturf(loc)))
 		heldclod.forceMove(loc)
 		heldclod = null
+		heldsnow.forceMove(loc)
+		heldsnow = null
 	update_icon()
 	. = ..()
 
@@ -75,6 +77,7 @@
 		heldclod.forceMove(get_turf(M))
 		heldsnow.forceMove(get_turf(M))
 		heldclod = null
+		heldsnow = null
 		update_icon()
 
 /obj/item/rogueweapon/shovel/attack_turf(turf/T, mob/living/user)
@@ -107,6 +110,14 @@
 						heldclod = new(src)
 						playsound(T,'sound/items/dig_shovel.ogg', 100, TRUE)
 						update_icon()
+		if(istype(T, /turf/open/floor/rogue/snow))
+			var/turf/open/floor/rogue/snow/S = T
+			if(heldsnow)
+				if(T != S)
+			 	heldsnow.forceMove(T)
+				heldsnow = null
+				playsound(T,'sound/items/empty_shovel.ogg', 100, TRUE)
+				update_icon()
 			return
 		if(heldclod)
 			if(istype(T, /turf/open/water))
