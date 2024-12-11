@@ -361,7 +361,7 @@
 	neighborlay = "dirtedge"
 	var/muddy = FALSE
 	var/bloodiness = 20
-	var/obj/structure/closet/dirthole/holie
+	var/obj/structure/closet/dirthole/hole
 	var/obj/machinery/crop/planted_crop
 	var/dirt_amt = 3
 
@@ -401,8 +401,8 @@
 	.=..()
 
 /turf/open/floor/rogue/dirt/Destroy()
-	if(holie)
-		QDEL_NULL(holie)
+	if(hole)
+		QDEL_NULL(hole)
 	if(planted_crop)
 		QDEL_NULL(planted_crop)
 	return ..()

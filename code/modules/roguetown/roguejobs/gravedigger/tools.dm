@@ -83,8 +83,8 @@
 		if(istype(T, /turf/open/floor/rogue/dirt))
 			var/turf/open/floor/rogue/dirt/D = T
 			if(heldclod)
-				if(D.holie && D.holie.stage < 4)
-					D.holie.attackby(src, user)
+				if(D.hole && D.hole.stage < 4)
+					D.hole.attackby(src, user)
 				else
 					if(istype(T, /turf/open/floor/rogue/dirt/road))
 						qdel(heldclod)
@@ -96,8 +96,8 @@
 					update_icon()
 					return
 			else
-				if(D.holie)
-					D.holie.attackby(src, user)
+				if(D.hole)
+					D.hole.attackby(src, user)
 				else
 					if(!D.planted_crop)
 						if(istype(T, /turf/open/floor/rogue/dirt/road))

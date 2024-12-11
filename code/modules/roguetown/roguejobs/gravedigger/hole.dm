@@ -294,7 +294,7 @@
 	var/turf/open/floor/rogue/dirt/T = loc
 	if(istype(T))
 		mastert = T
-		T.holie = src
+		T.hole = src
 		if(T.muddy)
 			if(!(locate(/obj/item/natural/worms) in T))
 				if(prob(55))
@@ -313,8 +313,8 @@
 
 /obj/structure/closet/dirthole/Destroy()
 	QDEL_NULL(abovemob)
-	if(mastert && mastert.holie == src)
-		mastert.holie = null
+	if(mastert && mastert.hole == src)
+		mastert.hole = null
 	return ..()
 
 /obj/structure/closet/dirthole/post_buckle_mob(mob/living/M)

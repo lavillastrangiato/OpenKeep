@@ -60,7 +60,7 @@
 		if(D.planted_crop)
 			to_chat(user, "<span class='warning'>Someone is already living here.</span>")
 			return
-		if(D.holie)
+		if(D.hole)
 			to_chat(user, "<span class='warning'>The seed needs a home to grow in, remove the hole.</span>")
 			return
 		D.planted_crop = new(D)
