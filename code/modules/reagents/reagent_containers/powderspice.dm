@@ -107,7 +107,9 @@
 		var/mob/living/carbon/C = M
 		var/obj/item/bodypart/CH = C.get_bodypart(BODY_ZONE_HEAD)
 		var/obj/item/bodypart/CB = C.get_bodypart(BODY_ZONE_CHEST)
-		if(!CH && !CB)
+		if(C.gender == FEMALE && CB)
+			user.visible_message(span_info("[user] snorts powder off [C]'s bosom!"))
+		if(!CH)
 			to_chat(user, "<span class='warning'>[C.p_theyre(TRUE)] missing something.</span>")
 		user.visible_message("<span class='danger'>[user] attempts to force [C] to inhale [src].</span>", \
 							"<span class='danger'>[user] attempts to force me to inhale [src]!</span>")
@@ -115,8 +117,6 @@
 			if(!CH.grabbedby)
 				to_chat(user, "<span class='info'>[C.p_they(TRUE)] steals [C.p_their()] face from it.</span>")
 				return FALSE
-		if(CB.gender == FEMALE && get_location_accessible(C, BODY_ZONE_CHEST))
-			user.visible_message(span_info("[user] snorts powder off [C]'s bosom!"))
 		if(!do_mob(user, M, 10))
 			return FALSE
 
